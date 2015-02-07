@@ -249,12 +249,37 @@ body .cities-list ul li ul li:nth-child(2) {
 .is-sanjose ul.today-overview li:nth-child(4) {
   color: #b6c0c9;
 }
+.day {
+  background-color: #2f76a1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2f76a1), to(#549dc5));
+  background: -webkit-linear-gradient(top, #2f76a1, #549dc5);
+  background: -moz-linear-gradient(top, #2f76a1, #549dc5);
+  background: -ms-linear-gradient(top, #2f76a1, #549dc5);
+  background: -o-linear-gradient(top, #2f76a1, #549dc5);
+}
+.day ul.today-overview,
+.day section.today,
+.day section.forecast,
+.day p.today-summary {
+  border-bottom: 1px solid #a1c8df;
+}
+.day.today-details,
+.day nav {
+  border-top: 1px solid #a1c8df;
+}
+.day ul.today-overview li:nth-child(2),
+.day ul.today-overview li:nth-child(4) {
+  color: #a1c8df;
+}
 nav {
   position: fixed;
   height: 42px;
   left: 0px;
   bottom: 0px;
   right: 0px;
+}
+nav.day {
+  background: #549dc5;
 }
 nav.is-sydney {
   background: #232931;

@@ -1,4 +1,4 @@
-<html manifest="cache.manifest">
+<html>
   <head>
 	<title>Weather App</title>
   <meta charset="utf8">
@@ -8,29 +8,43 @@
   <body>
     <div class="cities-list">
       <ul>
-        <li class="is-sanjose">
+        <li id="is-cur" class="day">
+          <a href="sanjose.html">
+            <ul>
+              <li>
+                <div class="time">&nbsp</div>
+                <div class="city-name">Current Location</div>
+              </li>
+              <li class="city-temp">&nbsp</li>
+            </ul>
+          </a>
+        </li>
+        <li id="is-sanjose" class="day">
           <a href="sanjose.html">
             <ul>
               <li>
                 <div class="time">8:42 AM</div>
                 <div class="city-name">San Jose</div>
               </li>
-              <li>49˚</li>
+              <li class="city-temp">&nbsp</li>
             </ul>
           </a>
         </li>
-        <li class="is-sydney">
+        <li id="is-sydney" class="day">
             <a href="sydney.html">
               <ul>
                 <li>
                   <div class="time">3:42 AM</div>
                   <div class="city-name">Sydney</div>
                 </li>
-              <li>70˚</li>
+              <li class="city-temp">&nbsp</li>
             </ul>
           </a>
         </li>
       </ul>
     </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="weather.js"></script>
   </body>
 </html>

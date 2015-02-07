@@ -246,6 +246,10 @@ body {
 @sanJoseColorEnd: #617588;
 @sanJoseColorTextAndLines: #b6c0c9;
 
+@dayColorStart: #2f76a1;
+@dayColorEnd: #549dc5;
+@dayColorTextAndLines: #a1c8df;
+
 .is-sydney {
   
   .gradient(@sydneyColorStart, @sydneyColorEnd);
@@ -283,6 +287,25 @@ body {
   }
 }
 
+.day {
+  
+  .gradient(@dayColorStart, @dayColorEnd);
+  
+  ul.today-overview, section.today, section.forecast, p.today-summary  {
+    border-bottom: 1px solid @dayColorTextAndLines;
+  }
+  
+  &.today-details, nav {
+    border-top: 1px solid @dayColorTextAndLines;
+  }
+  
+  ul.today-overview {
+    li:nth-child(2), li:nth-child(4) {
+      color: @dayColorTextAndLines;
+    }
+  }
+}
+
 nav {
   position: fixed;
   height: 42px;
@@ -290,7 +313,10 @@ nav {
   bottom: 0px;
   right:0px;
   
-  
+  &.day {
+    background: @dayColorEnd;
+  }
+
   &.is-sydney {
     background: @sydneyColorEnd;
   }
