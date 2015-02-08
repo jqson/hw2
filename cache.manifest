@@ -1,8 +1,10 @@
 CACHE MANIFEST
 
 # Bump this with each release:
-# Serial number 7
-
-citylist.html
+# V1.3.3.3index.html
+weather.js
 css/styles.css
+http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
 
+NETWORK:
+*

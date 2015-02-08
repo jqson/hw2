@@ -184,7 +184,7 @@ body {
   }
 
   .cities-list {
-    display: block;
+    display: none;
     ul {
       position: relative;
       li {
@@ -237,55 +237,22 @@ body {
 	background: -ms-linear-gradient(top, @startColor, @endColor);
 	background: -o-linear-gradient(top, @startColor, @endColor);
 }
-  
-@sydneyColorStart: #0b131e;
-@sydneyColorEnd: #232931;
-@sydneyColorTextAndLines: #8b8f92;
-
-@sanJoseColorStart: #718291;
-@sanJoseColorEnd: #617588;
-@sanJoseColorTextAndLines: #b6c0c9;
-
+ 
 @dayColorStart: #2f76a1;
 @dayColorEnd: #549dc5;
 @dayColorTextAndLines: #a1c8df;
+ 
+@dayCloudyColorStart: #718291;
+@dayCloudyColorEnd: #617588;
+@dayCloudyColorTextAndLines: #b6c0c9;
 
-.is-sydney {
-  
-  .gradient(@sydneyColorStart, @sydneyColorEnd);
-  
-  ul.today-overview, section.today, section.forecast, p.today-summary  {
-    border-bottom: 1px solid @sydneyColorTextAndLines;
-  }
-  
-  &.today-details, nav {
-    border-top: 1px solid @sydneyColorTextAndLines;
-  }
-  
-  ul.today-overview {
-    li:nth-child(2), li:nth-child(4) {
-      color: @sydneyColorTextAndLines;
-    }
-  }
-}
+@nightColorStart: #141830;
+@nightColorEnd: #262c43;
+@nightColorTextAndLines: #8d8f9a;
 
-.is-sanjose {
-  .gradient(@sanJoseColorStart, @sanJoseColorEnd);
-        
-  ul.today-overview, section.today, section.forecast, p.today-summary {
-    border-bottom: 1px solid @sanJoseColorTextAndLines;
-  }
-  
-  &.today-details, nav {
-    border-top: 1px solid @sanJoseColorTextAndLines;
-  }
-
-  ul.today-overview {
-    li:nth-child(2), li:nth-child(4) {
-      color: @sanJoseColorTextAndLines;
-    }
-  }
-}
+@nightCloudyColorStart: #0b131e;
+@nightCloudyColorEnd: #232931;
+@nightCloudyColorTextAndLines: #8b8f92;
 
 .day {
   
@@ -306,6 +273,63 @@ body {
   }
 }
 
+.dayCloudy {
+  
+  .gradient(@dayCloudyColorStart, @dayCloudyColorEnd);
+  
+  ul.today-overview, section.today, section.forecast, p.today-summary  {
+    border-bottom: 1px solid @dayCloudyColorTextAndLines;
+  }
+  
+  &.today-details, nav {
+    border-top: 1px solid @dayCloudyColorTextAndLines;
+  }
+  
+  ul.today-overview {
+    li:nth-child(2), li:nth-child(4) {
+      color: @dayCloudyColorTextAndLines;
+    }
+  }
+}
+
+.night {
+  
+  .gradient(@nightColorStart, @nightColorEnd);
+  
+  ul.today-overview, section.today, section.forecast, p.today-summary  {
+    border-bottom: 1px solid @nightColorTextAndLines;
+  }
+  
+  &.today-details, nav {
+    border-top: 1px solid @nightColorTextAndLines;
+  }
+  
+  ul.today-overview {
+    li:nth-child(2), li:nth-child(4) {
+      color: @nightColorTextAndLines;
+    }
+  }
+}
+
+.nightCloudy {
+  
+  .gradient(@nightCloudyColorStart, @nightCloudyColorEnd);
+  
+  ul.today-overview, section.today, section.forecast, p.today-summary  {
+    border-bottom: 1px solid @nightCloudyColorTextAndLines;
+  }
+  
+  &.today-details, nav {
+    border-top: 1px solid @nightCloudyColorTextAndLines;
+  }
+  
+  ul.today-overview {
+    li:nth-child(2), li:nth-child(4) {
+      color: @nightCloudyColorTextAndLines;
+    }
+  }
+}
+
 nav {
   position: fixed;
   height: 42px;
@@ -316,15 +340,21 @@ nav {
   &.day {
     background: @dayColorEnd;
   }
-
-  &.is-sydney {
-    background: @sydneyColorEnd;
+    
+  &.dayCloudy {
+    background: @dayCloudyColorEnd;
   }
 
-  &.is-sanjose {
-    background: @sanJoseColorEnd;
+ 
+  &.night {
+    background: @nightColorEnd;
   }
-  
+
+ 
+  &.nightCloudy {
+    background: @nightCloudyColorEnd;
+  }
+
   div {
     position: absolute;
     font-size: 25px;

@@ -166,7 +166,7 @@ body div.city-detail section img {
   height: 30px;
 }
 body .cities-list {
-  display: block;
+  display: none;
 }
 body .cities-list ul {
   position: relative;
@@ -205,50 +205,6 @@ body .cities-list ul li ul li:nth-child(2) {
   font-size: 65px;
   font-family: 'HelveticaNeue-UltraLight', Helvetica, Arial, Sans-Serif;
 }
-.is-sydney {
-  background-color: #0b131e;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0b131e), to(#232931));
-  background: -webkit-linear-gradient(top, #0b131e, #232931);
-  background: -moz-linear-gradient(top, #0b131e, #232931);
-  background: -ms-linear-gradient(top, #0b131e, #232931);
-  background: -o-linear-gradient(top, #0b131e, #232931);
-}
-.is-sydney ul.today-overview,
-.is-sydney section.today,
-.is-sydney section.forecast,
-.is-sydney p.today-summary {
-  border-bottom: 1px solid #8b8f92;
-}
-.is-sydney.today-details,
-.is-sydney nav {
-  border-top: 1px solid #8b8f92;
-}
-.is-sydney ul.today-overview li:nth-child(2),
-.is-sydney ul.today-overview li:nth-child(4) {
-  color: #8b8f92;
-}
-.is-sanjose {
-  background-color: #718291;
-  background: -webkit-gradient(linear, left top, left bottom, from(#718291), to(#617588));
-  background: -webkit-linear-gradient(top, #718291, #617588);
-  background: -moz-linear-gradient(top, #718291, #617588);
-  background: -ms-linear-gradient(top, #718291, #617588);
-  background: -o-linear-gradient(top, #718291, #617588);
-}
-.is-sanjose ul.today-overview,
-.is-sanjose section.today,
-.is-sanjose section.forecast,
-.is-sanjose p.today-summary {
-  border-bottom: 1px solid #b6c0c9;
-}
-.is-sanjose.today-details,
-.is-sanjose nav {
-  border-top: 1px solid #b6c0c9;
-}
-.is-sanjose ul.today-overview li:nth-child(2),
-.is-sanjose ul.today-overview li:nth-child(4) {
-  color: #b6c0c9;
-}
 .day {
   background-color: #2f76a1;
   background: -webkit-gradient(linear, left top, left bottom, from(#2f76a1), to(#549dc5));
@@ -271,6 +227,72 @@ body .cities-list ul li ul li:nth-child(2) {
 .day ul.today-overview li:nth-child(4) {
   color: #a1c8df;
 }
+.dayCloudy {
+  background-color: #718291;
+  background: -webkit-gradient(linear, left top, left bottom, from(#718291), to(#617588));
+  background: -webkit-linear-gradient(top, #718291, #617588);
+  background: -moz-linear-gradient(top, #718291, #617588);
+  background: -ms-linear-gradient(top, #718291, #617588);
+  background: -o-linear-gradient(top, #718291, #617588);
+}
+.dayCloudy ul.today-overview,
+.dayCloudy section.today,
+.dayCloudy section.forecast,
+.dayCloudy p.today-summary {
+  border-bottom: 1px solid #b6c0c9;
+}
+.dayCloudy.today-details,
+.dayCloudy nav {
+  border-top: 1px solid #b6c0c9;
+}
+.dayCloudy ul.today-overview li:nth-child(2),
+.dayCloudy ul.today-overview li:nth-child(4) {
+  color: #b6c0c9;
+}
+.night {
+  background-color: #141830;
+  background: -webkit-gradient(linear, left top, left bottom, from(#141830), to(#262c43));
+  background: -webkit-linear-gradient(top, #141830, #262c43);
+  background: -moz-linear-gradient(top, #141830, #262c43);
+  background: -ms-linear-gradient(top, #141830, #262c43);
+  background: -o-linear-gradient(top, #141830, #262c43);
+}
+.night ul.today-overview,
+.night section.today,
+.night section.forecast,
+.night p.today-summary {
+  border-bottom: 1px solid #8d8f9a;
+}
+.night.today-details,
+.night nav {
+  border-top: 1px solid #8d8f9a;
+}
+.night ul.today-overview li:nth-child(2),
+.night ul.today-overview li:nth-child(4) {
+  color: #8d8f9a;
+}
+.nightCloudy {
+  background-color: #0b131e;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0b131e), to(#232931));
+  background: -webkit-linear-gradient(top, #0b131e, #232931);
+  background: -moz-linear-gradient(top, #0b131e, #232931);
+  background: -ms-linear-gradient(top, #0b131e, #232931);
+  background: -o-linear-gradient(top, #0b131e, #232931);
+}
+.nightCloudy ul.today-overview,
+.nightCloudy section.today,
+.nightCloudy section.forecast,
+.nightCloudy p.today-summary {
+  border-bottom: 1px solid #8b8f92;
+}
+.nightCloudy.today-details,
+.nightCloudy nav {
+  border-top: 1px solid #8b8f92;
+}
+.nightCloudy ul.today-overview li:nth-child(2),
+.nightCloudy ul.today-overview li:nth-child(4) {
+  color: #8b8f92;
+}
 nav {
   position: fixed;
   height: 42px;
@@ -281,11 +303,14 @@ nav {
 nav.day {
   background: #549dc5;
 }
-nav.is-sydney {
-  background: #232931;
-}
-nav.is-sanjose {
+nav.dayCloudy {
   background: #617588;
+}
+nav.night {
+  background: #262c43;
+}
+nav.nightCloudy {
+  background: #232931;
 }
 nav div {
   position: absolute;
