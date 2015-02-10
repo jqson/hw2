@@ -33,7 +33,12 @@ $(window).on('hashchange', function(e) {
 $('.change-unit').click(function() {
   if (unit == 'si') unit = 'us';
   else unit = 'si';
- 
+      
+  // save weather to local stroage
+  if (typeof(Storage) !== 'undefined') {
+    localStorage.setItem('unit', unit);
+  }
+
   updateUnit();
   updateWeather();
 });
@@ -62,7 +67,7 @@ function updateAll() {
   
   // display weather saved in local stroage just after the app start
   if (lastUpdate == null) {    
-    // load weather from local stroage
+    // load weather and unit from local stroage
     if (typeof(Storage) !== 'undefined') {
       var curWeather = JSON.parse(localStorage.getItem('is-cur'));
       if (curWeather) {
@@ -73,12 +78,15 @@ function updateAll() {
       if (sanjoseWeather) dispWeather('is-sanjose', sanjoseWeather);
       var sydneyWeather = JSON.parse(localStorage.getItem('is-sydney'));
       if (sydneyWeather) dispWeather('is-sydney', sydneyWeather);
+      var preUnit = localStorage.getItem('unit');
+      if (preUnit) unit = preUnit;
+      console.log(preUnit);
     }
   }
 
   // if local storage is empty, or lastUpdate > 5min, update Weather from server 
   console.log('time from last update: ' + (curTime.getTime() / 1000 - lastUpdate));
-  if (lastUpdate == null || curTime.getTime() / 1000 - lastUpdate > 3000) {
+  if (lastUpdate == null || curTime.getTime() / 1000 - lastUpdate > 300) {
     updateWeather();
   }
 }
