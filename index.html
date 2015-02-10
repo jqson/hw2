@@ -8,10 +8,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   </head>
   <body>
-    <div class="cities-list">
+    <div id="cities-list" class="page" >
       <ul>
         <li id="is-cur" class="day">
-          <a href="sanjose.html">
+          <a href="#city/currentlocation">
             <ul>
               <li>
                 <div class="time">&nbsp</div>
@@ -22,10 +22,10 @@
           </a>
         </li>
         <li id="is-sanjose" class="day">
-          <a href="sanjose.html">
+          <a href="#city/sanjose">
             <ul>
               <li>
-                <div class="time">8:42 AM</div>
+                <div class="time">&nbsp</div>
                 <div class="city-name">San Jose</div>
               </li>
               <li class="city-temp">&nbsp</li>
@@ -33,10 +33,10 @@
           </a>
         </li>
         <li id="is-sydney" class="day">
-            <a href="sydney.html">
+            <a href="#city/sydney">
               <ul>
                 <li>
-                  <div class="time">3:42 AM</div>
+                  <div class="time">&nbsp</div>
                   <div class="city-name">Sydney</div>
                 </li>
               <li class="city-temp">&nbsp</li>
@@ -45,6 +45,344 @@
         </li>
       </ul>
     </div>
+ 
+    <div id="city-current" class="city-detail page">
+    <div id="is-cur-detail">
+      <section class="city-header">
+        <h2>Current Location</h2>
+        <h4>&nbsp</h4>
+        <h1>&nbsp</h1>
+      </section>
+      <section class="today">
+        <ul class="today-overview">
+          <li>&nbsp</li>
+          <li>Today</li>
+          <li>&nbsp</li>
+          <li>&nbsp</li>
+        </ul>
+        <div class="today-hourly-list-container">
+          <ul class="today-hourly-list" style="width: 1536px;">
+          </ul>
+        </div>
+      </section>
+      <section class="forecast">
+        <ul class="forecast-list">
+        </ul>
+      </section>
+      <section class="today-details">
+        <p class="today-summary">&nbsp</p>
+        <ul class="today-details-list">
+          <li>
+            <ul>
+              <li>Sunrise:</li>
+              <li class="sunriseTime">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Sunset:</li>
+              <li class="sunsetTime">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Chance of Rain:</li>
+              <li class="chanceRain">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Humidity:</li>
+              <li class="humidity">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Wind:</li>
+              <li class="wind">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Feels like:</li>
+              <li class="feelsLike">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Precipitation:</li>
+              <li class="precip">--</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Pressure:</li>
+              <li class="pressure">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Visibility:</li>
+              <li class="visibility">&nbsp</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <nav id="is-sanjose-nav">
+        <div class="change-unit">
+          <span class="celsius">˚C</span><span>/</span><span class="fahrenheit">˚F</span>
+        </div> 
+        <div class="next-prev-nav">
+          <div class="prev-button disabled">
+            <a href="#city/currentlocation">◀</a>
+          </div>
+          <div class="indicator-dots">
+            <span class="dot current">•</span><span class="dot">•</span><span class="dot">•</span>
+          </div>
+          <div class="next-button">
+            <a href="#city/sanjose">▶</a>
+          </div>
+        </div>
+        <div class="list-button">
+          <a href="#">☰</a>
+        </div>
+      </nav>
+      </div>
+    </div>
+
+    <div id="city-sanjose" class="city-detail page">
+    <div id="is-sanjose-detail">
+      <section class="city-header">
+        <h2>San Jose</h2>
+        <h4>&nbsp</h4>
+        <h1>&nbsp</h1>
+      </section>
+      <section class="today">
+        <ul class="today-overview">
+          <li>&nbsp</li>
+          <li>Today</li>
+          <li>&nbsp</li>
+          <li>&nbsp</li>
+        </ul>
+        <div class="today-hourly-list-container">
+          <ul class="today-hourly-list" style="width: 1536px;">
+          </ul>
+        </div>
+      </section>
+      <section class="forecast">
+        <ul class="forecast-list">
+        </ul>
+      </section>
+      <section class="today-details">
+        <p class="today-summary">Today: </p>
+        <ul class="today-details-list">
+          <li>
+            <ul>
+              <li>Sunrise:</li>
+              <li class="sunriseTime">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Sunset:</li>
+              <li class="sunsetTime">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Chance of Rain:</li>
+              <li class="chanceRain">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Humidity:</li>
+              <li class="humidity">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Wind:</li>
+              <li class="wind">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Feels like:</li>
+              <li class="feelsLike">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Precipitation:</li>
+              <li class="precip">--</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Pressure:</li>
+              <li class="pressure">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Visibility:</li>
+              <li class="visibility">&nbsp</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <nav id="is-sanjose-nav"> 
+        <div class="change-unit">
+          <span class="celsius">˚C</span><span>/</span><span class="fahrenheit">˚F</span>
+        </div> 
+        <div class="next-prev-nav">
+          <div class="prev-button">
+            <a href="#city/currentlocation">◀</a>
+          </div>
+          <div class="indicator-dots">
+            <span class="dot">•</span><span class="dot current">•</span><span class="dot">•</span>
+          </div>
+          <div class="next-button">
+            <a href="#city/sydney">▶</a>
+          </div>
+        </div>
+        <div class="list-button">
+          <a href="#">☰</a>
+        </div>
+      </nav>
+      </div>
+    </div>
+
+    <div id="city-sydney" class="city-detail page">
+    <div id="is-sydney-detail">
+      <section class="city-header">
+        <h2>Sydney</h2>
+        <h4>&nbsp</h4>
+        <h1>&nbsp</h1>
+      </section>
+      <section class="today">
+        <ul class="today-overview">
+          <li>&nbsp</li>
+          <li>Today</li>
+          <li>&nbsp</li>
+          <li>&nbsp</li>
+        </ul>
+        <div class="today-hourly-list-container">
+          <ul class="today-hourly-list" style="width: 1536px;">
+          </ul>
+        </div>
+      </section>
+      <section class="forecast">
+        <ul class="forecast-list">
+        </ul>
+      </section>
+      <section class="today-details">
+        <p class="today-summary">Today: </p>
+        <ul class="today-details-list">
+          <li>
+            <ul>
+              <li>Sunrise:</li>
+              <li class="sunriseTime">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Sunset:</li>
+              <li class="sunsetTime">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Chance of Rain:</li>
+              <li class="chanceRain">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Humidity:</li>
+              <li class="humidity">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Wind:</li>
+              <li class="wind">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Feels like:</li>
+              <li class="feelsLike">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Precipitation:</li>
+              <li class="precip">--</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Pressure:</li>
+              <li class="pressure">&nbsp</li>
+            </ul>
+          </li>
+          <li>
+          </li>
+          <li>
+            <ul>
+              <li>Visibility:</li>
+              <li class="visibility">&nbsp</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <nav id="is-sanjose-nav"> 
+        <div class="change-unit">
+          <span class="celsius">˚C</span><span>/</span><span class="fahrenheit">˚F</span>
+        </div> 
+        <div class="next-prev-nav">
+          <div class="prev-button">
+            <a href="#city/sanjose">◀</a>
+          </div>
+          <div class="indicator-dots">
+            <span class="dot">•</span><span class="dot">•</span><span class="dot current">•</span>
+          </div>
+          <div class="next-button disabled">
+            <a href="#city/sydney">▶</a>
+          </div>
+        </div>
+        <div class="list-button">
+          <a href="#">☰</a>
+        </div>
+      </nav>
+      </div>
+    </div>
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
     </script>
     <script type="text/javascript" src="weather.js"></script>

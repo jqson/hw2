@@ -43,7 +43,7 @@ body {
       text-align: center;
       left: 0px;
       right: 0px;
-      margin-top: 20px;
+      padding-top: 20px;
       height: 140px;
     }
     
@@ -183,8 +183,7 @@ body {
     }
   }
 
-  .cities-list {
-    display: none;
+  #cities-list {
     ul {
       position: relative;
       li {
@@ -228,6 +227,13 @@ body {
     }
   }
 }
+.page {
+  display: none;
+}
+
+.show {
+  display: block;
+}
 
 .gradient (@startColor, @endColor) {
 	background-color: @startColor;
@@ -262,7 +268,8 @@ body {
     border-bottom: 1px solid @dayColorTextAndLines;
   }
   
-  &.today-details, nav {
+  nav {
+    background: @dayColorEnd;
     border-top: 1px solid @dayColorTextAndLines;
   }
   
@@ -281,7 +288,8 @@ body {
     border-bottom: 1px solid @dayCloudyColorTextAndLines;
   }
   
-  &.today-details, nav {
+  nav {
+    background: @dayCloudyColorEnd;
     border-top: 1px solid @dayCloudyColorTextAndLines;
   }
   
@@ -300,8 +308,9 @@ body {
     border-bottom: 1px solid @nightColorTextAndLines;
   }
   
-  &.today-details, nav {
-    border-top: 1px solid @nightColorTextAndLines;
+  nav {
+    background: @nightColorEnd;
+    border-top: 1px solid @dayColorTextAndLines;
   }
   
   ul.today-overview {
@@ -319,7 +328,8 @@ body {
     border-bottom: 1px solid @nightCloudyColorTextAndLines;
   }
   
-  &.today-details, nav {
+  nav {
+    background: @nightCloudyColorEnd;
     border-top: 1px solid @nightCloudyColorTextAndLines;
   }
   
@@ -337,33 +347,23 @@ nav {
   bottom: 0px;
   right:0px;
   
-  &.day {
-    background: @dayColorEnd;
+  .disabled {
+    opacity: 0.5;
   }
-    
-  &.dayCloudy {
-    background: @dayCloudyColorEnd;
-  }
-
- 
-  &.night {
-    background: @nightColorEnd;
-  }
-
- 
-  &.nightCloudy {
-    background: @nightCloudyColorEnd;
-  }
-
   div {
     position: absolute;
     font-size: 25px;
     height: 42px;
-
-   &.disabled {
-    opacity: 0.5;
+    
+   &.change-unit {
+      left: 0%;
+      top: 5px;
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
    }
-      
+     
    &.next-prev-nav {
      width: 120px;
      left: 50%;

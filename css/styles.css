@@ -37,7 +37,7 @@ body div.city-detail section.city-header {
   text-align: center;
   left: 0px;
   right: 0px;
-  margin-top: 20px;
+  padding-top: 20px;
   height: 140px;
 }
 body div.city-detail section.today {
@@ -165,45 +165,48 @@ body div.city-detail section img {
   width: 30px;
   height: 30px;
 }
-body .cities-list {
-  display: none;
-}
-body .cities-list ul {
+body #cities-list ul {
   position: relative;
 }
-body .cities-list ul li {
+body #cities-list ul li {
   height: 84px;
 }
-body .cities-list ul li ul li {
+body #cities-list ul li ul li {
   position: absolute;
   height: 84px;
 }
-body .cities-list ul li ul li img {
+body #cities-list ul li ul li img {
   margin-top: 9px;
   width: 50px;
   padding-left: 5px;
 }
-body .cities-list ul li ul li:nth-child(1) {
+body #cities-list ul li ul li:nth-child(1) {
   left: 0px;
   right: 100px;
 }
-body .cities-list ul li ul li:nth-child(1) div {
+body #cities-list ul li ul li:nth-child(1) div {
   padding-left: 16px;
 }
-body .cities-list ul li ul li:nth-child(1) div.time {
+body #cities-list ul li ul li:nth-child(1) div.time {
   margin-top: 19px;
   font-size: 15px;
 }
-body .cities-list ul li ul li:nth-child(1) div.city-name {
+body #cities-list ul li ul li:nth-child(1) div.city-name {
   margin-top: 11px;
   font-size: 30px;
 }
-body .cities-list ul li ul li:nth-child(2) {
+body #cities-list ul li ul li:nth-child(2) {
   right: 0px;
   width: 100px;
   line-height: 84px;
   font-size: 65px;
   font-family: 'HelveticaNeue-UltraLight', Helvetica, Arial, Sans-Serif;
+}
+.page {
+  display: none;
+}
+.show {
+  display: block;
 }
 .day {
   background-color: #2f76a1;
@@ -219,8 +222,8 @@ body .cities-list ul li ul li:nth-child(2) {
 .day p.today-summary {
   border-bottom: 1px solid #a1c8df;
 }
-.day.today-details,
 .day nav {
+  background: #549dc5;
   border-top: 1px solid #a1c8df;
 }
 .day ul.today-overview li:nth-child(2),
@@ -241,8 +244,8 @@ body .cities-list ul li ul li:nth-child(2) {
 .dayCloudy p.today-summary {
   border-bottom: 1px solid #b6c0c9;
 }
-.dayCloudy.today-details,
 .dayCloudy nav {
+  background: #617588;
   border-top: 1px solid #b6c0c9;
 }
 .dayCloudy ul.today-overview li:nth-child(2),
@@ -263,9 +266,9 @@ body .cities-list ul li ul li:nth-child(2) {
 .night p.today-summary {
   border-bottom: 1px solid #8d8f9a;
 }
-.night.today-details,
 .night nav {
-  border-top: 1px solid #8d8f9a;
+  background: #262c43;
+  border-top: 1px solid #a1c8df;
 }
 .night ul.today-overview li:nth-child(2),
 .night ul.today-overview li:nth-child(4) {
@@ -285,8 +288,8 @@ body .cities-list ul li ul li:nth-child(2) {
 .nightCloudy p.today-summary {
   border-bottom: 1px solid #8b8f92;
 }
-.nightCloudy.today-details,
 .nightCloudy nav {
+  background: #232931;
   border-top: 1px solid #8b8f92;
 }
 .nightCloudy ul.today-overview li:nth-child(2),
@@ -300,25 +303,21 @@ nav {
   bottom: 0px;
   right: 0px;
 }
-nav.day {
-  background: #549dc5;
-}
-nav.dayCloudy {
-  background: #617588;
-}
-nav.night {
-  background: #262c43;
-}
-nav.nightCloudy {
-  background: #232931;
+nav .disabled {
+  opacity: 0.5;
 }
 nav div {
   position: absolute;
   font-size: 25px;
   height: 42px;
 }
-nav div.disabled {
-  opacity: 0.5;
+nav div.change-unit {
+  left: 0%;
+  top: 5px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 nav div.next-prev-nav {
   width: 120px;
