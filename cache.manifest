@@ -1,10 +1,25 @@
 CACHE MANIFEST
 
 # Bump this with each release:
-# V1.3.3.3index.html
+# V1.3
+
+index.html
 weather.js
 css/styles.css
 http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
+
+images/clear-day.png
+images/clear-night.png
+images/cloudy.png
+images/fog.png
+images/hail.png
+images/partly-cloudy-day.png
+images/partly-cloudy-night.png
+images/rain.png
+images/sleet.png
+images/snow.png
+images/thunderstorm.png
+images/wind.png
 
 NETWORK:
 *
